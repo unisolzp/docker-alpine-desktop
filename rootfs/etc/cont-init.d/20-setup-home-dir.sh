@@ -9,15 +9,15 @@ log() {
 }
 
 # Set Environment variables
-export HOME=/home/app
+export HOME=/home/scrape
 
 # Create home dir if not exists
-HOME_CONFIG=/config/home/app
+HOME_CONFIG=/config/home/scrape
 [ -d "$HOME_CONFIG" ] || mkdir -p $HOME_CONFIG
 
 # Copy .bashrc to HOME
 APP_BASHRC="$HOME/.bashrc"
-[ -f "$APP_BASHRC" ] || cp /defaults/home/app/.bashrc $APP_BASHRC
+[ -f "$APP_BASHRC" ] || cp /defaults/home/scrape/.bashrc $APP_BASHRC
 
 # Take ownership of the config directory content.
 chown -R $USER_ID:$GROUP_ID $HOME_CONFIG
