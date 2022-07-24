@@ -12,7 +12,7 @@
 set -xef
 
 # Set Environment variables
-export HOME=/home/app
+export HOME=/home/scrape
 
 
 ##
