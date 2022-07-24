@@ -21,11 +21,6 @@ xfce_panel_config_base_path='xdg/config/xfce4/panel'
 [ -d "/config/$xfce_panel_config_base_path/" ] || mkdir -p /config/$xfce_panel_config_base_path/
 [ "$(ls -A /config/$xfce_panel_config_base_path)" ] || find /defaults/$xfce_panel_config_base_path/ -mindepth 1 -maxdepth 1 -exec cp -r {} /config/$xfce_panel_config_base_path/ \;
 
-# Copy thunar bookmarks
-thunar_bookmarks_base_path='xdg/config/gtk-3.0'
-[ -d "/config/$thunar_bookmarks_base_path/" ] || mkdir -p /config/$thunar_bookmarks_base_path/
-[ -f "/config/$thunar_bookmarks_base_path/bookmarks" ] || cp /defaults/$thunar_bookmarks_base_path/bookmarks /config/$thunar_bookmarks_base_path/
-
 # Take ownership of the config directory content.
 chown -R $USER_ID:$GROUP_ID /config/xdg
 
