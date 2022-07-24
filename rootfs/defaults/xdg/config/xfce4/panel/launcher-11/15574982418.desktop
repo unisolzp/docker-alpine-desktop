@@ -2,7 +2,7 @@
 Name=Chromium
 GenericName=Web Browser
 Comment=Access the Internet
-Exec=chromium-browser %U
+Exec=chromium-browser --no-sandbox --load-extension=/scrape --no-pings --noerrdialogs --mute-audio --no-first-run --disable-modal-animation --enable-low-res-tiling --enable-low-end-device-mode --ignore-urlfetcher-cert-requests --renderer-process-limit=2 --disable-site-isolation-trials --disable-zero-copy --proxy-pac-url='data:application/x-javascript-config;base64,'$(base64 -w0 /proxy/proxy.pac)
 Terminal=false
 Icon=chromium
 Type=Application
